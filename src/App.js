@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import './App.css';
 import User from './components/User';
 
@@ -18,11 +19,25 @@ const friends = [{
   name : "tayfun",
 }
 ]
-
+ 
 
 function App() {
+
+  const [name ,setName] = useState("Yusuf");
+ const [age, setAge] = useState (28)
   return (
     <div className="App">
+     <h1>Hello {name}!</h1>
+     <h2>Age {age}</h2>
+     <button onClick={()=> {
+       setName("Avcilar")
+     }
+     }>Change name </button>
+     <button onClick={()=> {
+       setAge(29)
+     }}>Change age</button>
+
+
      <User name="Yusuf" 
      surname="Avcilar" 
      age="29" 

@@ -23,7 +23,13 @@ const friends = [{
 function App() {
   return (
     <div className="App">
-     <User name="Yusuf" surname="Avcilar" age="29" isLogin={true} friends={friends} />
+     <User name="Yusuf" 
+     surname="Avcilar" 
+     age="29" 
+     isLogin={true} 
+     friends={friends} 
+     address={{ title:"Kartal/İstanbul",
+    zip:334}} />
     </div>
   );
 }
